@@ -143,13 +143,13 @@ export default function HeroScroll() {
 
         {/* ========== START CONTENT (Beginning of scroll) ========== */}
         <div 
-          className="absolute inset-0 flex items-end justify-center z-10 px-4 pb-16 md:pb-20 pointer-events-none transition-opacity duration-200"
+          className="absolute inset-0 flex items-end justify-center z-10 px-4 pb-12 md:pb-20 pointer-events-none transition-opacity duration-200"
           style={{ opacity: startContentOpacity }}
         >
           <div className="max-w-3xl w-full pointer-events-auto">
             
             {/* Glass Card Container */}
-            <div className="rounded-3xl p-6 md:p-10 text-center text-white"
+            <div className="rounded-3xl p-5 md:p-10 text-center text-white"
               style={{
                 background: "rgba(10, 14, 39, 0.75)",
                 backdropFilter: "blur(20px)",
@@ -159,37 +159,37 @@ export default function HeroScroll() {
               }}>
               
               {/* Rating Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-5 rounded-full"
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 rounded-full"
                 style={{ background: "rgba(255, 184, 0, 0.15)", border: "1px solid rgba(255, 184, 0, 0.3)" }}>
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={12} fill="#FFB800" stroke="#FFB800" />
+                    <Star key={i} size={10} fill="#FFB800" stroke="#FFB800" />
                   ))}
                 </div>
-                <span className="text-xs font-semibold">
+                <span className="text-[10px] md:text-xs font-semibold">
                   {COMPANY.rating}/5 · {COMPANY.reviews} Reviews
                 </span>
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-4"
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-3"
                 style={{ fontFamily: "var(--font-heading)" }}>
                 From Damaged To{" "}
                 <span className="gradient-text">Stunning</span>
               </h1>
 
               {/* Subheading */}
-              <p className="text-sm md:text-lg mb-6 text-white/80 max-w-xl mx-auto">
+              <p className="text-xs md:text-lg mb-5 text-white/80 max-w-xl mx-auto">
                 Premium roof transformations by licensed experts
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                <Link href="/free-inspection" className="btn-primary !text-sm md:!text-base">
-                  Get FREE Inspection <ArrowRight size={16} />
+              <div className="flex flex-col sm:flex-row gap-2.5 justify-center items-center">
+                <Link href="/free-inspection" className="btn-primary !py-2.5 !text-xs md:!text-base w-full sm:w-auto">
+                  Get FREE Inspection <ArrowRight size={14} />
                 </Link>
-                <a href={`tel:${COMPANY.phone}`} className="btn-secondary !text-sm md:!text-base">
-                  <Phone size={14} /> {COMPANY.phoneDisplay}
+                <a href={`tel:${COMPANY.phone}`} className="btn-secondary !py-2.5 !text-xs md:!text-base w-full sm:w-auto">
+                  <Phone size={12} /> {COMPANY.phoneDisplay}
                 </a>
               </div>
             </div>
@@ -198,21 +198,21 @@ export default function HeroScroll() {
 
         {/* Scroll Indicator */}
         <div 
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none transition-opacity duration-300"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none transition-opacity duration-300 hidden md:block"
           style={{ opacity: indicatorOpacity }}
         >
           <div className="flex flex-col items-center gap-2"
             style={{
               background: "rgba(10, 14, 39, 0.7)",
               backdropFilter: "blur(10px)",
-              padding: "12px 20px",
+              padding: "10px 16px",
               borderRadius: "9999px",
               border: "1px solid rgba(255,255,255,0.15)"
             }}>
             <div className="flex items-center gap-3 text-white">
-              <span className="text-xs font-bold uppercase tracking-widest">Scroll</span>
-              <div className="w-5 h-8 rounded-full border-2 border-white/80 flex items-start justify-center p-1">
-                <div className="w-0.5 h-1.5 rounded-full bg-white animate-bounce" />
+              <span className="text-[10px] font-bold uppercase tracking-widest">Scroll</span>
+              <div className="w-4 h-7 rounded-full border-2 border-white/80 flex items-start justify-center p-1">
+                <div className="w-0.5 h-1 rounded-full bg-white animate-bounce" />
               </div>
             </div>
           </div>
@@ -220,13 +220,13 @@ export default function HeroScroll() {
 
         {/* ========== END CONTENT (Transformation complete) ========== */}
         <div 
-          className="absolute inset-0 flex items-end justify-center z-10 px-4 pb-16 md:pb-20 pointer-events-none transition-opacity duration-500"
+          className="absolute inset-0 flex items-end justify-center z-10 px-4 pb-12 md:pb-20 pointer-events-none transition-opacity duration-500"
           style={{ opacity: endContentOpacity }}
         >
           <div className="max-w-4xl w-full pointer-events-auto">
             
             {/* Success Glass Card */}
-            <div className="rounded-3xl p-6 md:p-10 text-center text-white"
+            <div className="rounded-3xl p-5 md:p-10 text-center text-white"
               style={{
                 background: "rgba(10, 14, 39, 0.85)",
                 backdropFilter: "blur(20px)",
@@ -236,48 +236,48 @@ export default function HeroScroll() {
               }}>
               
               {/* Success Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-5 rounded-full"
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 rounded-full"
                 style={{ background: "rgba(34, 197, 94, 0.2)", border: "1px solid rgba(34, 197, 94, 0.4)" }}>
-                <CheckCircle2 size={14} className="text-green-400" />
-                <span className="text-xs font-semibold text-green-300 uppercase tracking-wider">
+                <CheckCircle2 size={12} className="text-green-400" />
+                <span className="text-[10px] font-semibold text-green-300 uppercase tracking-wider">
                   Transformation Complete
                 </span>
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-4"
+              <h2 className="text-2xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-3"
                 style={{ fontFamily: "var(--font-heading)" }}>
                 This Could Be{" "}
                 <span className="gradient-text">Your Home</span>
               </h2>
 
-              <p className="text-sm md:text-lg mb-6 text-white/80 max-w-xl mx-auto">
-                Join {COMPANY.projects} happy homeowners who transformed their roofs with us
+              <p className="text-xs md:text-lg mb-5 text-white/80 max-w-xl mx-auto">
+                Join {COMPANY.projects} happy homeowners
               </p>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-3 gap-3 md:gap-6 mb-6 max-w-2xl mx-auto">
-                <div className="rounded-2xl p-3 md:p-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
-                  <div className="text-2xl md:text-3xl font-extrabold gradient-text">15+</div>
-                  <div className="text-[10px] md:text-xs text-white/60 uppercase tracking-wider mt-1">Years</div>
+              <div className="grid grid-cols-3 gap-2.5 md:gap-6 mb-5 max-w-2xl mx-auto">
+                <div className="rounded-2xl p-2 md:p-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                  <div className="text-lg md:text-3xl font-extrabold gradient-text">15+</div>
+                  <div className="text-[8px] md:text-xs text-white/60 uppercase tracking-wider mt-0.5">Years</div>
                 </div>
-                <div className="rounded-2xl p-3 md:p-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
-                  <div className="text-2xl md:text-3xl font-extrabold gradient-text">{COMPANY.projects}</div>
-                  <div className="text-[10px] md:text-xs text-white/60 uppercase tracking-wider mt-1">Roofs Done</div>
+                <div className="rounded-2xl p-2 md:p-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                  <div className="text-lg md:text-3xl font-extrabold gradient-text">{COMPANY.projects}</div>
+                  <div className="text-[8px] md:text-xs text-white/60 uppercase tracking-wider mt-0.5">Roofs Done</div>
                 </div>
-                <div className="rounded-2xl p-3 md:p-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
-                  <div className="text-2xl md:text-3xl font-extrabold gradient-text">24/7</div>
-                  <div className="text-[10px] md:text-xs text-white/60 uppercase tracking-wider mt-1">Support</div>
+                <div className="rounded-2xl p-2 md:p-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                  <div className="text-lg md:text-3xl font-extrabold gradient-text">24/7</div>
+                  <div className="text-[8px] md:text-xs text-white/60 uppercase tracking-wider mt-0.5">Support</div>
                 </div>
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                <Link href="/free-inspection" className="btn-primary !text-sm md:!text-base">
-                  Start My Transformation <ArrowRight size={16} />
+              <div className="flex flex-col sm:flex-row gap-2.5 justify-center items-center">
+                <Link href="/free-inspection" className="btn-primary !py-2.5 !text-xs md:!text-base w-full sm:w-auto">
+                  Start My Transformation <ArrowRight size={14} />
                 </Link>
-                <a href={`tel:${COMPANY.phone}`} className="btn-secondary !text-sm md:!text-base">
-                  <Phone size={14} /> Call Now
+                <a href={`tel:${COMPANY.phone}`} className="btn-secondary !py-2.5 !text-xs md:!text-base w-full sm:w-auto">
+                  <Phone size={12} /> Call Now
                 </a>
               </div>
             </div>
