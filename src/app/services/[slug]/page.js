@@ -1,6 +1,7 @@
 import { SERVICES, COMPANY } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone, CheckCircle2, ShieldCheck, Clock, Award } from "lucide-react";
 import LeadFormSection from "@/components/home/LeadFormSection";
 
@@ -101,15 +102,14 @@ export default async function ServicePage({ params }) {
 
             <div className="relative">
               <div className="aspect-[4/5] rounded-[2rem] overflow-hidden bg-gray-100 shadow-2xl relative group">
-                {/* Fallback pattern if image is missing */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-900 overflow-hidden">
-                   <div className="absolute inset-0 opacity-20" 
-                        style={{ 
-                          backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", 
-                          backgroundSize: "20px 20px" 
-                        }} />
-                   <div className="text-white/20 text-9xl font-black rotate-12 select-none">ROOFING</div>
-                </div>
+                <Image 
+                  src={`/services/${slug}.webp`}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  priority
+                />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 p-6 glass-dark rounded-2xl border border-white/10">
                    <p className="text-white font-bold text-xl mb-1">High-Quality Finish</p>
